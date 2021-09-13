@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_10">10dp</dimen>
+    <dimen name="top_20">20dp</dimen>
+    <dimen name="size_50">50sp</dimen>
+    <dimen name="pad_5">5dp</dimen>
+    <dimen name="top_50">50dp</dimen>
+    <dimen name="top_60">60dp</dimen>
+    <dimen name="pad_8">8dp</dimen>
+    <dimen name="top_15">15dp</dimen>
+    <dimen name="top_30">30dp</dimen>
+    <dimen name="size_45">45sp</dimen>
+    <dimen name="top_80">80dp</dimen>
+    <dimen name="top_5">5dp</dimen>
+    <dimen name="text_15sp">15sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+</resources>

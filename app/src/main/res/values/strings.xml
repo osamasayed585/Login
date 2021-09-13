@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">First Task</string>
+    <string name="email">email</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="loguot">Loguot</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">name</string>
+    <string name="phone">phone</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_here">Sign Here</string>
+</resources>

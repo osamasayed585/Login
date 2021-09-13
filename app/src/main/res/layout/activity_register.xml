@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.Register">
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textColor="@color/title_activity"
+        android:textSize="@dimen/size_45"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/top_20"/>
+
+    <ProgressBar
+        android:id="@+id/resgister_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signUp"
+        android:indeterminateTint="@color/pro"
+        android:layout_marginTop="@dimen/top_5"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_5"
+        android:layout_below="@id/resgister_progressBar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="@dimen/pad_8"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_10"
+        android:layout_below="@id/layout_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:drawableStart="@drawable/ic_email_24"
+            android:drawablePadding="@dimen/pad_8"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_10"
+        android:layout_below="@id/layout_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="@dimen/pad_8"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="@dimen/top_10"
+        android:layout_below="@id/layout_phone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:drawableStart="@drawable/ic_lock_24"
+            android:drawablePadding="@dimen/pad_8"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_Password"
+        android:padding="13dp"
+        android:text="@string/register"
+        android:layout_marginTop="@dimen/top_30"
+        android:textSize="15sp"
+        android:textAllCaps="false"/>
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_marginTop="@dimen/top_5"
+        android:layout_below="@id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/register_have"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/top_10"
+            android:layout_marginTop="@dimen/top_30"
+            android:layout_weight=".5"
+            android:gravity="center|right"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/ramade"
+            android:textSize="@dimen/text_15sp" />
+        <TextView
+            android:id="@+id/register_signHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_marginTop="@dimen/top_30"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="@string/sign_here"
+            android:textColor="@color/purple_700"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/register_cancel"
+        android:layout_below="@id/lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/top_10"
+        android:textSize="@dimen/text_20sp"
+        android:text="Cancel"/>
+
+
+</RelativeLayout>
