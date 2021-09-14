@@ -28,7 +28,8 @@ public class UserClient {
         return Instance;
     }
 
-    public Call<UserModel> postRegister(Data data){ return api.postRegister(data);}
+    public Call<UserModel> postRegister(Data data){
+        return api.postRegister(data);}
 
     public Call<UserModel> postLogin(Data data){ return api.postLogin(data);}
 
