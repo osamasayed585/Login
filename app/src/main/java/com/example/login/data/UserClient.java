@@ -1,7 +1,7 @@
-package com.example.volleytest.data;
+package com.example.login.data;
 
-import com.example.volleytest.pojo.Data;
-import com.example.volleytest.pojo.UserModel;
+import com.example.login.pojo.Data;
+import com.example.login.pojo.UserModel;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

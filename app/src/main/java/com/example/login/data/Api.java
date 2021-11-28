@@ -1,13 +1,12 @@
-package com.example.volleytest.data;
+package com.example.login.data;
 
-import com.example.volleytest.pojo.Data;
-import com.example.volleytest.pojo.UserModel;
+import com.example.login.pojo.Data;
+import com.example.login.pojo.UserModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface Api {

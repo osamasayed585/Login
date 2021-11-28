@@ -26,6 +26,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    flavorDimensions 'app_store'
+    productFlavors {
+        google {
+            dimension 'app_store'
+        }
+        amazon {
+            dimension 'app_store'
+            applicationId '.amazon'
+        }
+    }
 }
 
 dependencies {
