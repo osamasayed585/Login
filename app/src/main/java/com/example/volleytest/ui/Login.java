@@ -23,13 +23,15 @@ import retrofit2.Response;
 public class Login extends AppCompatActivity {
     private TextInputEditText email,password;
     private Button btnLogin;
-    private TextView signUp, cancel;
+    private TextView signUp, cancel, google, facebook;
     private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // todo create shared preference for save a status if was true or false
 
         // inflate all variable
         inflateForElements();
@@ -94,6 +96,8 @@ public class Login extends AppCompatActivity {
         password = (TextInputEditText)findViewById(R.id.login_ed_password);
         btnLogin = (Button)findViewById(R.id.login_btn_login);
         signUp = (TextView)findViewById(R.id.login_txt_signUp);
+        google = (TextView)findViewById(R.id.loginWithGoogle);
+        facebook = (TextView)findViewById(R.id.loginWithFacebook);
         cancel = findViewById(R.id.login_cancel);
         progressBar = findViewById(R.id.login_progressBar);
     }

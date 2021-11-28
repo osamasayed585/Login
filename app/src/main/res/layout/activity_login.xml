@@ -110,15 +110,47 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/login_cancel"
+            android:id="@+id/loginWithGoogle"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="20dp"
+            android:layout_centerHorizontal="true"
             android:layout_below="@id/lin"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:text="@string/login_with_google"
+            android:background="@drawable/shape_loginwithgoogle"
+            app:drawableStartCompat="@drawable/ic_google" />
+
+        <TextView
+            android:id="@+id/loginWithFacebook"
+            android:layout_marginTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:drawablePadding="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/loginWithGoogle"
+            android:text="@string/login_with_facebook"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:background="@drawable/shape_loginwithgoogle"
+            app:drawableStartCompat="@drawable/ic_facebook" />
+
+        <TextView
+            android:id="@+id/login_cancel"
+            android:layout_below="@id/loginWithFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
             android:layout_marginTop="@dimen/top_30"
             android:textSize="20sp"
-            android:text="Cancel"/>
+            android:text="@string/cancel"/>
 
         <ProgressBar
             android:id="@+id/login_progressBar"
