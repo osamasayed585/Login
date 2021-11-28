@@ -1,4 +1,4 @@
-package com.example.volleytest.pojo;
+package com.example.login.pojo;
 
 
 import com.google.gson.annotations.Expose;

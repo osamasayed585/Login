@@ -1,4 +1,4 @@
-package com.example.volleytest.ui;
+package com.example.login.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.volleytest.R;
-import com.example.volleytest.data.UserClient;
-import com.example.volleytest.pojo.Data;
-import com.example.volleytest.pojo.UserModel;
+import com.example.login.R;
+import com.example.login.data.UserClient;
+import com.example.login.pojo.Data;
+import com.example.login.pojo.UserModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;

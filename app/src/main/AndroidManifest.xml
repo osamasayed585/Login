@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.volleytest">
+    package="com.example.login">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VolleyTest">
-        <activity android:name=".ui.Profile"></activity>
-        <activity android:name=".ui.Register"></activity>
-        <activity android:name=".ui.Login">
+        <activity android:name="com.example.login.ui.Profile"></activity>
+        <activity android:name="com.example.login.ui.Register"></activity>
+        <activity android:name="com.example.login.ui.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

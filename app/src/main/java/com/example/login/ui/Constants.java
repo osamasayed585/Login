@@ -1,4 +1,4 @@
-package com.example.volleytest.ui;
+package com.example.login.ui;
 
 public class Constants {
     private static String token;
