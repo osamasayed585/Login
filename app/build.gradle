@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.huawei.agconnect'
 }
 
 android {
@@ -16,25 +17,31 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('HmsDemo.jks')
+            keyAlias 'key0'
+            keyPassword '123456'
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
         }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-    flavorDimensions 'app_store'
-    productFlavors {
-        google {
-            dimension 'app_store'
-        }
-        amazon {
-            dimension 'app_store'
-            applicationId '.amazon'
-        }
     }
 }
 
@@ -53,5 +60,10 @@ dependencies {
     // viewModel
     def lifecycle_version = "2.1.0"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    // Sign-in with google
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
+    implementation "com.huawei.agconnect:agconnect-auth-google:1.5.2.201"  // config this SDK
+    implementation 'com.huawei.agconnect:agconnect-auth:1.5.2.201' // config this SDK
 
 }

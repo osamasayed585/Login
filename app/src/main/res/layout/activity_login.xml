@@ -35,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
+                android:textSize="12sp"
                 android:drawableStart="@drawable/ic_email_24"
                 android:drawablePadding="@dimen/pad_8"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -52,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:textSize="12sp"
                 android:drawableStart="@drawable/ic_lock_24"
                 android:drawablePadding="@dimen/pad_5"
                 android:inputType="textPassword"/>
@@ -114,13 +116,13 @@
             android:layout_marginTop="20dp"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:drawablePadding="20dp"
+            android:drawablePadding="30dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/lin"
             android:textColor="@color/black"
             android:textAllCaps="false"
-            android:textSize="18sp"
-            android:padding="10dp"
+            android:textSize="14sp"
+            android:padding="5dp"
             android:text="@string/login_with_google"
             android:background="@drawable/shape_loginwithgoogle"
             app:drawableStartCompat="@drawable/ic_google" />
@@ -129,6 +131,7 @@
             android:id="@+id/loginWithFacebook"
             android:layout_marginTop="10dp"
             android:layout_width="250dp"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textAllCaps="false"
@@ -136,8 +139,8 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/loginWithGoogle"
             android:text="@string/login_with_facebook"
-            android:textSize="18sp"
-            android:padding="10dp"
+            android:textSize="14sp"
+            android:padding="5dp"
             android:background="@drawable/shape_loginwithgoogle"
             app:drawableStartCompat="@drawable/ic_facebook" />
 

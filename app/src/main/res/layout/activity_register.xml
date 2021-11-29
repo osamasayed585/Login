@@ -27,7 +27,7 @@
         android:indeterminateTint="@color/pro"
         android:layout_marginTop="@dimen/top_5"
         android:layout_centerInParent="true"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
 
     <com.google.android.material.textfield.TextInputLayout

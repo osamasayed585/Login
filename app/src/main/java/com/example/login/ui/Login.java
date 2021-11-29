@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -15,6 +16,14 @@ import com.example.login.data.UserClient;
 import com.example.login.pojo.Data;
 import com.example.login.pojo.UserModel;
 import com.google.android.material.textfield.TextInputEditText;
+import com.huawei.agconnect.api.AGConnectApi;
+import com.huawei.agconnect.auth.AGConnectAuth;
+import com.huawei.agconnect.auth.AGConnectAuthCredential;
+import com.huawei.agconnect.auth.AGConnectUser;
+import com.huawei.agconnect.auth.SignInResult;
+import com.huawei.hmf.tasks.OnFailureListener;
+import com.huawei.hmf.tasks.OnSuccessListener;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,6 +50,12 @@ public class Login extends AppCompatActivity {
         ClickCancel();
         // while click button login
         loginWithApi();
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GoogleIDLogin();
+            }
+        });
     }
 
     private void clickSignUp() {
@@ -100,5 +115,33 @@ public class Login extends AppCompatActivity {
         facebook = (TextView)findViewById(R.id.loginWithFacebook);
         cancel = findViewById(R.id.login_cancel);
         progressBar = findViewById(R.id.login_progressBar);
+    }
+    private void GoogleIDLogin(){
+        Toast.makeText(Login.this, "start", Toast.LENGTH_SHORT).show();
+        Log.i("AuthDemo", "start:" );
+        AGConnectAuth.getInstance().signIn(this, AGConnectAuthCredential. Google_Provider)
+                .addOnSuccessListener(new OnSuccessListener<SignInResult>() {
+                    @Override
+                    public void onSuccess(SignInResult signInResult) {
+                        // onSuccess
+                        AGConnectUser user = signInResult.getUser();
+                        Log.i("AuthDemo", "success:" + user);
+                        Toast.makeText(Login.this, "success: "+ user, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(Exception e) {
+                        // onFail
+                        Log.i("AuthDemo", "failed:" + e.getMessage());
+                        Toast.makeText(Login.this, "failed: "+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+    // Lifecycle required by the unified channel.
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        AGConnectApi.getInstance().activityLifecycle().onActivityResult(requestCode, resultCode, data);
     }
 }

@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">First Task</string>
+    <string name="app_name">Login</string>
+    <string name="google_app_id">1070829811622</string>
+    <string name="google_app_id2">login-2f864</string>
+    <string name="google_client_id">1070829811622-eakp6fnetle1q32u08u7hkt4rp2iis75.apps.googleusercontent.com</string>
+    <string name="google_client_id2">1070829811622-r6t9p1l1rcl0csomoi23q3g3nrt6t0oe.apps.googleusercontent.com</string>
+    <string name="Client_Secret">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</string>
     <string name="email">email</string>
     <string name="forget_password">Forget password?</string>
     <string name="login">Login</string>
